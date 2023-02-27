@@ -27,7 +27,7 @@
                 android:id="@+id/draweditor_tools"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:checkedButton="@+id/draweditor_pen">
+                app:checkedBtn="@+id/draweditor_pen">
 
                 <org.kore.kolabnotes.android.draweditor.ToolButton
                     android:id="@+id/draweditor_pen"

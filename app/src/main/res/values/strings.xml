@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Kolab Notes</string>
+    <string name="app_name">Kolab Notes Fork</string>
 
     <string name="sticky_note_name">Kolab Sticky-Note</string>
 
@@ -10,7 +10,7 @@
 
     <string name="action_settings">Settings</string>
 
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
 
     <string name="yes">Yes</string>

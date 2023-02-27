@@ -1,29 +1,31 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion  29
-    buildToolsVersion '29.0.3'
+    compileSdkVersion  33
 
     defaultConfig {
         applicationId "org.kore.kolabnotes.android"
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 105
-        versionName "4.2.1"
+        versionName "4.2.2-beta"
 
         //Running test
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     packagingOptions {
-        exclude "META-INF/LICENSE.txt"
+        resources {
+            excludes += ['META-INF/LICENSE.txt']
+        }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    lintOptions {
+    namespace 'org.kore.kolabnotes.android'
+    lint {
         checkReleaseBuilds false
     }
 }
@@ -32,17 +34,17 @@ dependencies {
     //compile fileTree(dir: 'libs', include: ['*.jar'])
     //Android support libraries
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.material:material:1.8.0'
 
     // Add dependency for UI test
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test:rules:1.1.1'
-    androidTestImplementation 'androidx.annotation:annotation:1.0.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'androidx.annotation:annotation:1.6.0'
 
     implementation 'com.github.konradrenner:kolabnotes-java:3.4.1'
     implementation 'jp.wasabeef:richeditor-android:1.2.2'

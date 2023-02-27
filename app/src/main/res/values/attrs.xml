@@ -5,6 +5,6 @@
               format="boolean"/>
     </declare-styleable>
     <declare-styleable name="ToolButtonGroup">
-        <attr name="checkedButton" format="integer" />
+        <attr name="checkedBtn" format="integer" />
     </declare-styleable>
 </resources>

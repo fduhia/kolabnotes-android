@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.kore.kolabnotes.android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
@@ -26,6 +25,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
+            android:exported="true"
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
@@ -38,6 +38,7 @@
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
         </activity>
         <activity
+            android:exported="true"
             android:name=".DetailActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -58,6 +59,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:exported="true"
             android:name=".TagListActivity"
             android:label="@string/app_name">
             <intent-filter>
@@ -67,6 +69,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:exported="true"
             android:name=".DrawEditorActivity"
             android:label="@string/app_name">
             <intent-filter>
@@ -76,6 +79,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:exported="true"
             android:name=".AttachmentActivity"
             android:label="@string/app_name">
             <intent-filter>
@@ -85,6 +89,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:exported="true"
             android:name=".security.AuthenticatorActivity"
             android:label="@string/login_label"
             android:windowSoftInputMode="adjustPan|stateHidden">
@@ -113,7 +118,9 @@
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/syncadapter" />
         </service>
-        <service android:name=".security.AccountAuthenticatorService">
+        <service
+            android:exported="true"
+            android:name=".security.AccountAuthenticatorService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -127,6 +134,7 @@
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <receiver
+            android:exported="true"
             android:name=".widget.ListWidget"
             android:icon="@mipmap/ic_kolabnotes_breeze"
             android:label="@string/app_name">
@@ -140,6 +148,7 @@
         </receiver>
 
         <activity
+            android:exported="true"
             android:name=".widget.ListWidgetConfigureActivity"
             android:icon="@mipmap/ic_kolabnotes_breeze"
             android:label="@string/app_name">
@@ -149,6 +158,7 @@
         </activity>
 
         <receiver
+            android:exported="true"
             android:name=".widget.StickyNoteWidget"
             android:icon="@mipmap/ic_kolabnotes_breeze"
             android:label="@string/sticky_note_name">
@@ -172,6 +182,7 @@
         </provider>
 
         <activity
+            android:exported="true"
             android:name=".widget.StickyNoteWidgetConfigureActivity"
             android:icon="@mipmap/ic_kolabnotes_breeze"
             android:label="@string/sticky_note_name">
