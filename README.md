@@ -1,3 +1,5 @@
+# This is a fork of the Kolab Notes app for maintenance purposes
+
 # kolabnotes-android
 Kolab Notes is the open source note taking app, which makes it possible to sync your notes with Kolab and IMAP server in the Kolab v3 storage format.
 
